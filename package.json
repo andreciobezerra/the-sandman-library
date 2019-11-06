@@ -2,18 +2,23 @@
   "name": "the-sandman-library",
   "version": "1.0.0",
   "description": "'An on-line library'",
-  "main": "index.js",
+  "main": ".src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreciobezerra/the-sandman-library.git"
+    "url": "https://github.com/andreciobezerra/the-sandman-library.git"
   },
   "author": "Andrécio Costa Bezerra",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/andreciobezerra/the-sandman-library/issues"
   },
-  "homepage": "https://github.com/andreciobezerra/the-sandman-library#readme"
+  "homepage": "https://github.com/andreciobezerra/the-sandman-library#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }
