@@ -1,0 +1,19 @@
+{
+  "name": "the-sandman-library",
+  "version": "1.0.0",
+  "description": "'An on-line library'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreciobezerra/the-sandman-library.git"
+  },
+  "author": "Andrécio Costa Bezerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreciobezerra/the-sandman-library/issues"
+  },
+  "homepage": "https://github.com/andreciobezerra/the-sandman-library#readme"
+}
