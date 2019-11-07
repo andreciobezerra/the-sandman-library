@@ -1,6 +1,6 @@
-import {book} from './book'
+import mainScreen from './mainScreen'
 
 
-const newBook = book('Eu','Augusto dos Anjos','666', 'Read')
+mainScreen()
 
 
