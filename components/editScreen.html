@@ -1,0 +1,39 @@
+<section id="editScreen">
+  <div>
+    <form id="editForm">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control text-capitalize" id="titleEdit" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author:</ label>
+          <input type="text" class="form-control text-capitalize" id="authorEdit" required>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <label for="pages">Number of Pages:</label>
+          <input type="number" class="form-control" id="pagesEdit" required>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="form-check-label">Status:</label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label ">
+              <input type="radio" class="form-check-input" name="statusEdit" id="read">Read
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="statusEdit" id="unread">Unread
+            </label>
+          </div>
+        </div>
+    </form>
+  </div>
+  <div>
+    <button id="updateBtn" type="submit" class="btn btn-success" form="editForm">Update</button>
+    <button id="cancelBtn" type="button" class="btn btn-danger mx-2">Cancel</button>
+  </div>
+  </div>
+</section>

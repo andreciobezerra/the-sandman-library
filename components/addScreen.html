@@ -1,0 +1,37 @@
+<section id="addScreen">
+  <form id="formAdd">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" required>
+    </div>
+    <div class="form-group">
+      <label for="author">Author:</ label>
+        <input type="text" class="form-control" id="author" required>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <label for="pages">Number of Pages:</label>
+        <input type="number" class="form-control" id="pages" required>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class="form-check-label">Status:</label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label ">
+            <input type="radio" class="form-check-input" name="status">Read
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="status">Unread
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div>
+    <button id="saveBtn" type="submit" class="btn btn-primary" form="formAdd">Save</button>
+    <button id="cancelBtn" type="button" class="btn btn-danger mx-2">Cancel</button>
+  </div>
+</section>
