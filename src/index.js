@@ -15,12 +15,21 @@ $(document).on('click', '#listBooks', () => mainScreen.listBooks())
 $(document).on('click', '#addBook', () => addScreen.load())
 $(document).on('click', '#editBook', () => selectionScreen.load())
 $(document).on('click', '#searchBook', () => searchScreen.load())
+$(document).on('click', '#editBtn2', (event) => mainScreen.toEdit(event.target.value))
+$(document).on('click', '#deleteBtn', (event) => mainScreen.toDelete(event.target.value))
+
 
 /* Selection screen event */
 $(document).on('click', '#selectBtn', ()=> editScreen.load($('#selectBook').val()))
 
 /* Edit Screen event */
-$(document).on('click', '#updateBtn', ()=> editScreen.updateBooks())
+$(document).on('click', '#updateBtn', ()=> editScreen.updateBooks(
+  $('#titleEdit').val().toLowerCase(),
+  $('#authorEdit').val().toLowerCase(),
+  $('#pagesEdit').val(),
+  ($('input[name*=statusEdit]')[0].checked) ? 'Read' : 'Unread',
+  $('#bookID').val()
+))
 
 /* Add Screen event */
 $(document).on('click', '#saveBtn', () => addScreen.save(
@@ -32,5 +41,5 @@ $(document).on('click', '#saveBtn', () => addScreen.save(
 )
 
 /* Search Screen event */
-$(document).on('click', '#searchBtn', ()=> searchScreen.search())
+$(document).on('click', '#searchBtn', () => searchScreen.search($('#bookToSearch').val().toLowerCase()))
 

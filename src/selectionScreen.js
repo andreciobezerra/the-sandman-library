@@ -1,8 +1,16 @@
-import { addScreen } from './addScreen'
+import { firestore } from './firebase'
 
 export const selectionScreen = (() => {
-  const pickBooks = () => addScreen.myLibrary.map(book => $('#selectBook').append(`<option value='${JSON.stringify(book)}'>${book.title} - ${book.author}</option>`))
-  const load = () => $('#controlBoard').empty().load('components/selectionScreen.html #selectionScreen', () => pickBooks())
+  const pickBooks = async() => { 
+    let books = await firestore.collection('books').get()
+    books.forEach(book => $('#selectBook').append(`<option value='${JSON.stringify({id:book.id, data:book.data()})}'>${book.data().title} - ${book.data().author}</option>`)) 
+ 
+  } 
   
+  const load = () => {
+    $('#dashBoard').empty()
+    $('#controlBoard').empty().load('components/selectionScreen.html #selectionScreen', () => pickBooks())
+}
+
   return { load }
 })()
