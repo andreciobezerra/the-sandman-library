@@ -4,7 +4,7 @@
   "description": "'An on-line library'",
   "main": ".src/index.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./dist/main",
     "build": "webpack --config webpack.config.js --mode=production",
     "watch": "webpack --progress --watch",
     "server": "webpack-dev-server --open"
