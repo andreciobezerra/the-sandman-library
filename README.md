@@ -6,9 +6,9 @@ This project has the learning purpose of that some techonologies,wich seen below
 
 * HTML 5
 * Bootstrap
-* Javascript / Jquery
+* Javascript / JQuery
 * Webpack
-* Firebase with FireStore
+* Firebase with Firestore
 
 ## How to install and use
 
